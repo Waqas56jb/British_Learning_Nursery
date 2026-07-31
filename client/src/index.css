@@ -109,6 +109,15 @@ ul {
   padding: clamp(3rem, 7vw, 6.5rem) 0;
   position: relative;
   overflow: clip;
+  scroll-margin-top: calc(var(--header-h) + var(--safe-top) + 12px);
+}
+
+#home {
+  scroll-margin-top: 0;
+}
+
+#contact {
+  scroll-margin-top: calc(var(--header-h) + var(--safe-top) + 12px);
 }
 
 .section-label {
