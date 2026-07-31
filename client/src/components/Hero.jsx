@@ -1,16 +1,14 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { SITE } from '../data'
+import { useLanguage } from '../i18n/LanguageContext'
 import './Hero.css'
 
 const ease = [0.22, 1, 0.36, 1]
 
-const brandWords = [
-  { text: 'British', tone: 'red' },
-  { text: 'Learning', tone: 'yellow' },
-  { text: 'Nursery', tone: 'blue' },
-]
-
 export default function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section id="home" className="hero">
       <div className="hero__media" aria-hidden="true">
@@ -23,10 +21,10 @@ export default function Hero() {
 
       <div className="hero__frame">
         <div className="hero__content">
-          <h1 className="hero__brand" aria-label={SITE.name}>
-            {brandWords.map((word, i) => (
+          <h1 className="hero__brand" aria-label={t.site.name}>
+            {t.site.brandWords.map((word, i) => (
               <motion.span
-                key={word.text}
+                key={`${word.text}-${i}`}
                 className={`hero__brand-word hero__brand-word--${word.tone}`}
                 initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -51,7 +49,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.48, ease }}
           >
-            {SITE.tagline}
+            {t.site.tagline}
           </motion.p>
 
           <motion.p
@@ -60,7 +58,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.58, ease }}
           >
-            {SITE.description}
+            {t.site.description}
           </motion.p>
 
           <motion.div
@@ -69,16 +67,16 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7, ease }}
           >
-            <a href="#contact" className="btn btn-primary hero__btn">
-              Book a Tour
-            </a>
+            <Link to="/register" className="btn btn-primary hero__btn">
+              {t.common.bookTour}
+            </Link>
             <a
               href={SITE.whatsapp}
               className="btn btn-ghost hero__btn"
               target="_blank"
               rel="noreferrer"
             >
-              WhatsApp Us
+              {t.common.whatsappUs}
             </a>
           </motion.div>
         </div>
@@ -90,9 +88,9 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.8 }}
-        aria-label="Scroll to about"
+        aria-label={t.hero.scrollLabel}
       >
-        <span>Discover</span>
+        <span>{t.common.discover}</span>
         <span className="hero__scroll-line" />
       </motion.a>
     </section>

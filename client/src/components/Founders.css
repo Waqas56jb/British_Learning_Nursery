@@ -1,0 +1,105 @@
+.founders {
+  background:
+    radial-gradient(ellipse at 85% 10%, rgba(245, 197, 24, 0.1), transparent 40%),
+    radial-gradient(ellipse at 5% 80%, rgba(0, 51, 141, 0.05), transparent 42%),
+    var(--paper);
+}
+
+.founders__intro {
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+  max-width: 40rem;
+}
+
+.founders__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.founders__person {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+  padding: clamp(1.2rem, 3vw, 1.6rem);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(0, 51, 141, 0.08);
+  border-top: 3px solid transparent;
+  min-width: 0;
+}
+
+.founders__person:nth-child(1) {
+  border-top-color: var(--bln-red);
+}
+
+.founders__person:nth-child(2) {
+  border-top-color: var(--bln-blue);
+}
+
+.founders__person:nth-child(3) {
+  border-top-color: var(--bln-yellow);
+}
+
+.founders__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.founders__avatar--0 {
+  background: linear-gradient(145deg, var(--bln-red), #ff6b6f);
+}
+
+.founders__avatar--1 {
+  background: linear-gradient(145deg, var(--bln-blue), #4a7fd4);
+}
+
+.founders__avatar--2 {
+  background: linear-gradient(145deg, #c9a00e, var(--bln-yellow));
+  color: var(--bln-blue-deep);
+}
+
+.founders__role {
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bln-red);
+  margin-bottom: 0.35rem;
+}
+
+.founders__copy h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-weight: 600;
+  color: var(--bln-blue-deep);
+  margin-bottom: 0.45rem;
+}
+
+.founders__copy p:last-child {
+  color: var(--ink-muted);
+  font-size: clamp(0.9rem, 2.2vw, 0.98rem);
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .founders__person {
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .founders__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}

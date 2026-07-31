@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { SITE } from '../data'
+import { useLanguage } from '../i18n/LanguageContext'
 import './CtaBanner.css'
 
 export default function CtaBanner() {
+  const { t } = useLanguage()
+
   return (
     <section className="cta" aria-labelledby="cta-heading">
       <div className="cta__bg" aria-hidden="true" />
@@ -13,12 +17,9 @@ export default function CtaBanner() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="cta__eyebrow">{SITE.admissions}</p>
-          <h2 id="cta-heading">Admissions open for the upcoming academic year</h2>
-          <p>
-            Visit us in {SITE.location}, or message us on WhatsApp — we would love to welcome
-            your family.
-          </p>
+          <p className="cta__eyebrow">{t.site.admissions}</p>
+          <h2 id="cta-heading">{t.cta.title}</h2>
+          <p>{t.cta.text}</p>
         </motion.div>
         <motion.div
           className="cta__actions"
@@ -27,16 +28,16 @@ export default function CtaBanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.55, delay: 0.1 }}
         >
-          <a href="#contact" className="btn btn-accent">
-            Register Interest
-          </a>
+          <Link to="/register" className="btn btn-accent">
+            {t.common.registerInterest}
+          </Link>
           <a
             href={SITE.whatsapp}
             className="btn btn-ghost"
             target="_blank"
             rel="noreferrer"
           >
-            WhatsApp Us
+            {t.common.whatsappUs}
           </a>
         </motion.div>
       </div>

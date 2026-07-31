@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
-import { FEATURES, SITE } from '../data'
+import { useLanguage } from '../i18n/LanguageContext'
 import './About.css'
 
 export default function About() {
+  const { t } = useLanguage()
+
   return (
     <section id="about" className="section about">
       <div className="about__aura" aria-hidden="true" />
@@ -15,17 +17,13 @@ export default function About() {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="section-label">About BLN</p>
-            <h2 className="section-title">Nurturing young hearts and curious minds</h2>
-            <p className="section-lead about__lead">
-              Since {SITE.established}, British Learning Nursery has welcomed families in{' '}
-              {SITE.location} with a warm blend of British learning, values, and sensory
-              discovery — a calm, joyful place for children to begin.
-            </p>
+            <p className="section-label">{t.about.label}</p>
+            <h2 className="section-title">{t.about.title}</h2>
+            <p className="section-lead about__lead">{t.about.lead}</p>
             <ul className="about__list">
-              <li>Qualified, caring educators</li>
-              <li>Safe, colourful learning spaces</li>
-              <li>Strong partnership with parents</li>
+              {t.about.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
             </ul>
           </motion.div>
 
@@ -36,18 +34,13 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img
-              src="/incorporate.png"
-              alt="British Learning Nursery building in Sabah Al Salem"
-            />
-            <figcaption>
-              Our home in Sabah Al Salem — colourful, welcoming, and made for little learners.
-            </figcaption>
+            <img src="/incorporate.png" alt={t.about.imageAlt} />
+            <figcaption>{t.about.caption}</figcaption>
           </motion.figure>
         </div>
 
         <div className="about__features">
-          {FEATURES.map((item, i) => (
+          {t.features.map((item, i) => (
             <motion.div
               key={item.title}
               className="about__feature"

@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { NAV_LINKS, SITE } from '../data'
+import { SITE } from '../data'
+import { NAV_HREFS } from '../i18n/translations'
+import { useLanguage } from '../i18n/LanguageContext'
 import './Header.css'
 
-export default function Header() {
+export default function Header({ solid = false }) {
+  const { t, lang, setLang } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -22,49 +26,65 @@ export default function Header() {
   }, [open])
 
   const close = () => setOpen(false)
-  const elevated = scrolled || open
+  const elevated = solid || scrolled || open
 
   return (
     <header className={`header ${elevated ? 'header--solid' : 'header--glass'}`}>
       <div className="container header__inner">
-        <a href="#home" className="header__brand" onClick={close}>
-          <img src="/logo.png" alt="British Learning Nursery" className="header__logo" />
+        <Link to="/" className="header__brand" onClick={close}>
+          <img src="/logo.png" alt={t.site.name} className="header__logo" />
           <span className="header__brand-text">
             <span className="header__mark" aria-hidden="true">
               <span>B</span>
               <span>L</span>
               <span>N</span>
             </span>
-            <span className="header__name">British Learning Nursery</span>
+            <span className="header__name">{t.site.name}</span>
           </span>
-        </a>
+        </Link>
 
         <nav className="header__nav" aria-label="Primary">
-          {NAV_LINKS.map((link) => (
+          {NAV_HREFS.map((link) => (
             <a key={link.href} href={link.href} className="header__link">
-              {link.label}
+              {t.nav[link.key]}
             </a>
           ))}
         </nav>
 
         <div className="header__actions">
-          <a href="#contact" className="btn btn-primary header__cta">
-            Book a Tour
-          </a>
+          <div className="header__lang" role="group" aria-label={t.lang.switchTo}>
+            <button
+              type="button"
+              className={`header__lang-btn ${lang === 'en' ? 'is-active' : ''}`}
+              onClick={() => setLang('en')}
+              aria-pressed={lang === 'en'}
+            >
+              {t.lang.en}
+            </button>
+            <button
+              type="button"
+              className={`header__lang-btn ${lang === 'ar' ? 'is-active' : ''}`}
+              onClick={() => setLang('ar')}
+              aria-pressed={lang === 'ar'}
+            >
+              {t.lang.ar}
+            </button>
+          </div>
+
           <a
             href={SITE.whatsapp}
             className="btn btn-whatsapp header__cta header__cta--wa"
             target="_blank"
             rel="noreferrer"
           >
-            WhatsApp
+            {t.common.whatsapp}
           </a>
           <button
             type="button"
             className={`header__menu-btn ${open ? 'is-open' : ''}`}
             aria-expanded={open}
             aria-controls="mobile-nav"
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? t.common.closeMenu : t.common.openMenu}
             onClick={() => setOpen((v) => !v)}
           >
             <span />
@@ -85,7 +105,7 @@ export default function Header() {
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
           >
             <nav className="header__drawer-nav" aria-label="Mobile">
-              {NAV_LINKS.map((link, i) => (
+              {NAV_HREFS.map((link, i) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
@@ -94,14 +114,30 @@ export default function Header() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 * i, duration: 0.35 }}
                 >
-                  {link.label}
+                  {t.nav[link.key]}
                 </motion.a>
               ))}
             </nav>
+            <div className="header__drawer-lang">
+              <button
+                type="button"
+                className={`header__lang-btn ${lang === 'en' ? 'is-active' : ''}`}
+                onClick={() => setLang('en')}
+              >
+                English
+              </button>
+              <button
+                type="button"
+                className={`header__lang-btn ${lang === 'ar' ? 'is-active' : ''}`}
+                onClick={() => setLang('ar')}
+              >
+                العربية
+              </button>
+            </div>
             <div className="header__drawer-actions">
-              <a href="#contact" className="btn btn-primary" onClick={close}>
-                Book a Tour
-              </a>
+              <Link to="/register" className="btn btn-primary" onClick={close}>
+                {t.common.registerInterest}
+              </Link>
               <a
                 href={SITE.whatsapp}
                 className="btn btn-whatsapp"
@@ -109,7 +145,7 @@ export default function Header() {
                 rel="noreferrer"
                 onClick={close}
               >
-                WhatsApp Us
+                {t.common.whatsappUs}
               </a>
             </div>
           </motion.div>

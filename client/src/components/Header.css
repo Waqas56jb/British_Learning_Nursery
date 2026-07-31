@@ -135,6 +135,67 @@
   flex: 0 0 auto;
 }
 
+.header__lang {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  gap: 2px;
+}
+
+.header--solid .header__lang {
+  background: rgba(0, 51, 141, 0.06);
+  border-color: rgba(0, 51, 141, 0.1);
+}
+
+.header__lang-btn {
+  min-width: 36px;
+  min-height: 32px;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header--solid .header__lang-btn {
+  color: var(--bln-blue);
+}
+
+.header__lang-btn.is-active {
+  background: #fff;
+  color: var(--bln-blue-deep);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.header--solid .header__lang-btn.is-active {
+  background: var(--bln-blue);
+  color: #fff;
+}
+
+.header__drawer-lang {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.header__drawer-lang .header__lang-btn {
+  min-height: 44px;
+  color: var(--bln-blue-deep);
+  background: rgba(0, 51, 141, 0.05);
+  border: 1px solid rgba(0, 51, 141, 0.1);
+}
+
+.header__drawer-lang .header__lang-btn.is-active {
+  background: var(--bln-blue);
+  color: #fff;
+  border-color: var(--bln-blue);
+}
+
 /* Force-hide desktop CTAs on mobile (beats .btn { display: inline-flex }) */
 .header a.btn.header__cta {
   display: none !important;
@@ -237,16 +298,11 @@
     max-width: 200px;
   }
 
-  /* One compact CTA + menu on tablet */
-  .header a.btn.header__cta:not(.header__cta--wa) {
+  .header a.btn.header__cta--wa {
     display: inline-flex !important;
     min-height: 40px;
     padding: 0.5rem 0.95rem;
     font-size: 0.8rem;
-  }
-
-  .header a.btn.header__cta--wa {
-    display: none !important;
   }
 }
 
@@ -303,7 +359,6 @@
     }
   }
 
-  .header a.btn.header__cta,
   .header a.btn.header__cta--wa {
     display: inline-flex !important;
     min-height: 40px;

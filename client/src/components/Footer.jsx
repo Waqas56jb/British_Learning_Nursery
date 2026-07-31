@@ -1,7 +1,10 @@
 import { SITE } from '../data'
+import { useLanguage } from '../i18n/LanguageContext'
 import './Footer.css'
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer id="contact" className="footer">
       <div className="container footer__top">
@@ -13,32 +16,32 @@ export default function Footer() {
               <span>L</span>
               <span>N</span>
             </p>
-            <p className="footer__name">{SITE.name}</p>
-            <p className="footer__tag">{SITE.description}</p>
+            <p className="footer__name">{t.site.name}</p>
+            <p className="footer__tag">{t.site.description}</p>
           </div>
         </div>
 
         <div className="footer__cols">
           <div>
-            <h3>Visit</h3>
-            <p>{SITE.address}</p>
-            <p>{SITE.location}</p>
+            <h3>{t.footer.visit}</h3>
+            <p>{t.site.address}</p>
+            <p>{t.site.location}</p>
             <a
               href={SITE.mapsUrl}
               target="_blank"
               rel="noreferrer"
               className="footer__map"
             >
-              Get directions
+              {t.common.getDirections}
             </a>
           </div>
 
           <div>
-            <h3>Connect</h3>
+            <h3>{t.footer.connect}</h3>
             <ul className="footer__social">
               <li>
                 <a href={SITE.whatsapp} target="_blank" rel="noreferrer">
-                  WhatsApp
+                  {t.common.whatsapp}
                 </a>
               </li>
               <li>
@@ -60,10 +63,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3>Enquire</h3>
-            <p>Book a tour or ask about admissions — we will update phone details soon.</p>
-            <a href={SITE.whatsapp} className="btn btn-whatsapp footer__wa" target="_blank" rel="noreferrer">
-              WhatsApp Us
+            <h3>{t.footer.enquire}</h3>
+            <p>{t.footer.enquireText}</p>
+            <a
+              href={SITE.whatsapp}
+              className="btn btn-whatsapp footer__wa"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t.common.whatsappUs}
             </a>
           </div>
         </div>
@@ -71,8 +79,12 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
-          <p className="footer__established">Established {SITE.established}</p>
+          <p>
+            © {new Date().getFullYear()} {t.site.name}. {t.footer.rights}
+          </p>
+          <p className="footer__established">
+            {t.footer.established} {t.site.established}
+          </p>
         </div>
       </div>
     </footer>

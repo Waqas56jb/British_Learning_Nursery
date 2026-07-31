@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
-import { PILLARS } from '../data'
+import { useLanguage } from '../i18n/LanguageContext'
 import './Curriculum.css'
 
 export default function Curriculum() {
+  const { t } = useLanguage()
+
   return (
     <section id="curriculum" className="section curriculum">
       <div className="container">
@@ -13,16 +15,13 @@ export default function Curriculum() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-label">Curriculum</p>
-          <h2 className="section-title">Four pillars that shape every day</h2>
-          <p className="section-lead">
-            British curriculum, values, life skills, and sensory learning — woven together
-            with care.
-          </p>
+          <p className="section-label">{t.curriculum.label}</p>
+          <h2 className="section-title">{t.curriculum.title}</h2>
+          <p className="section-lead">{t.curriculum.lead}</p>
         </motion.div>
 
         <div className="curriculum__grid">
-          {PILLARS.map((pillar, i) => (
+          {t.curriculum.pillars.map((pillar, i) => (
             <motion.div
               key={pillar.title}
               className={`curriculum__pillar curriculum__pillar--${pillar.tone}`}

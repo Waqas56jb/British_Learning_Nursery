@@ -16,6 +16,7 @@
   --header-h: 72px;
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Outfit', sans-serif;
+  --font-arabic: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --page-pad: clamp(1rem, 4.2vw, 2rem);
   --content-max: 1120px;
@@ -320,4 +321,83 @@ ul {
   .hero__scroll {
     display: none !important;
   }
+}
+
+/* —— Arabic / RTL —— */
+body.is-rtl {
+  font-family: var(--font-arabic);
+}
+
+body.is-rtl .section-title,
+body.is-rtl .hero__brand,
+body.is-rtl .hero__title,
+body.is-rtl .cta h2,
+body.is-rtl .header__mark,
+body.is-rtl .footer__mark,
+body.is-rtl .programs__meta h3,
+body.is-rtl .programs__modal h3,
+body.is-rtl .curriculum__pillar h3,
+body.is-rtl .founders__copy h3,
+body.is-rtl .facilities__list li,
+body.is-rtl .header__drawer-nav a,
+body.is-rtl .register__success h2 {
+  font-family: var(--font-arabic);
+}
+
+body.is-rtl .hero__rule {
+  transform-origin: right center;
+}
+
+body.is-rtl .hero__title {
+  max-width: 22ch;
+}
+
+body.is-rtl .programs__item {
+  border-left-width: 1px;
+  border-right-width: 4px;
+}
+
+body.is-rtl .programs__item--red {
+  border-left-color: rgba(0, 51, 141, 0.08);
+  border-right-color: var(--bln-red);
+}
+
+body.is-rtl .programs__item--blue {
+  border-left-color: rgba(0, 51, 141, 0.08);
+  border-right-color: var(--bln-blue);
+}
+
+body.is-rtl .about__list li {
+  padding-left: 0;
+  padding-right: 1.55rem;
+}
+
+body.is-rtl .about__list li::before {
+  left: auto;
+  right: 0;
+}
+
+body.is-rtl .programs__highlights li {
+  padding-left: 0;
+  padding-right: 1.35rem;
+}
+
+body.is-rtl .programs__highlights li::before {
+  left: auto;
+  right: 0;
+}
+
+body.is-rtl .programs__close {
+  right: auto;
+  left: 0.75rem;
+}
+
+body.is-rtl .programs__modal h3,
+body.is-rtl .programs__modal-label {
+  padding-right: 0;
+  padding-left: 2.5rem;
+}
+
+body.is-rtl .header__name {
+  max-width: min(42vw, 160px);
 }

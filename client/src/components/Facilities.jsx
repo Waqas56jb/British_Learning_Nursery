@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
-import { FACILITIES } from '../data'
+import { useLanguage } from '../i18n/LanguageContext'
 import './Facilities.css'
 
 export default function Facilities() {
+  const { t } = useLanguage()
+
   return (
     <section id="facilities" className="section facilities">
       <div className="container facilities__layout">
@@ -13,16 +15,13 @@ export default function Facilities() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-label">Facilities</p>
-          <h2 className="section-title">Spaces made for wonder</h2>
-          <p className="section-lead">
-            From bright classrooms to outdoor play — a colourful, secure environment where
-            children feel at home. Gallery photos can be added later.
-          </p>
+          <p className="section-label">{t.facilities.label}</p>
+          <h2 className="section-title">{t.facilities.title}</h2>
+          <p className="section-lead">{t.facilities.lead}</p>
         </motion.div>
 
         <ul className="facilities__list">
-          {FACILITIES.map((item, i) => (
+          {t.facilities.items.map((item, i) => (
             <motion.li
               key={item}
               initial={{ opacity: 0, x: 16 }}
@@ -46,10 +45,7 @@ export default function Facilities() {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img
-              src="/incorporate.png"
-              alt="Colourful exterior of British Learning Nursery"
-            />
+            <img src="/incorporate.png" alt={t.facilities.imageAlt} />
           </motion.div>
         </div>
       </div>
