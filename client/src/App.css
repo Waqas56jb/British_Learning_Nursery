@@ -1,6 +1,9 @@
 .app {
+  min-height: 100vh;
   min-height: 100svh;
   min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
   background:
     radial-gradient(ellipse at 0% 20%, rgba(227, 30, 36, 0.04), transparent 35%),
     radial-gradient(ellipse at 100% 60%, rgba(0, 51, 141, 0.05), transparent 40%),
