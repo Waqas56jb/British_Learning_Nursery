@@ -1,0 +1,41 @@
+.friends {
+  background:
+    radial-gradient(ellipse at 90% 15%, rgba(245, 197, 24, 0.12), transparent 40%),
+    radial-gradient(ellipse at 10% 80%, rgba(0, 51, 141, 0.06), transparent 42%),
+    var(--paper);
+}
+
+.friends__intro {
+  margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+  max-width: 40rem;
+}
+
+.friends__card {
+  margin: 0;
+  display: grid;
+  gap: 0.95rem;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border-radius: clamp(16px, 3vw, 22px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 51, 141, 0.1);
+  box-shadow: var(--shadow-soft);
+  max-width: 640px;
+}
+
+.friends__card img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.friends__card figcaption {
+  font-family: var(--font-arabic), var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--bln-blue-deep);
+  max-width: 28ch;
+}

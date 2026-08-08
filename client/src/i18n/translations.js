@@ -10,6 +10,7 @@ export const translations = {
       curriculum: 'Curriculum',
       facilities: 'Facilities',
       graduates: 'Past Graduates',
+      friends: 'Abood & Maryom',
       contact: 'Contact',
     },
     lang: {
@@ -186,15 +187,18 @@ export const translations = {
     graduates: {
       label: 'Past Graduates',
       title: 'Proud moments from our little alumni',
-      lead: 'Meet Abood & Maryom, and a growing gallery of past graduates from British Learning Nursery.',
-      empty: 'More graduate photos coming soon',
-      friends: {
-        src: '/image.png',
-        alt: 'Abood and Maryom',
-        caption:
-          'You — Abood and Maryom are awaiting you and missing you a lot. Can\'t wait to see you!',
-      },
+      lead: 'A growing gallery of past graduates from British Learning Nursery. Photos can be added anytime.',
+      empty: 'Graduate photos coming soon',
       photos: [],
+    },
+    friends: {
+      label: 'Abood & Maryom',
+      title: 'Our little friends',
+      lead: 'Say hello to Abood and Maryom.',
+      src: '/image.png',
+      alt: 'Abood and Maryom',
+      caption:
+        'Abood and Maryom are awaiting you and missing you a lot. Can\'t wait to see you!',
     },
     cta: {
       title: 'Admissions open for the upcoming academic year',
@@ -202,7 +206,7 @@ export const translations = {
     },
     welcome: {
       message:
-        'You — Abood and Maryom are awaiting you and missing you a lot. Can\'t wait to see you!',
+        'Abood and Maryom are awaiting you and missing you a lot. Can\'t wait to see you!',
       imageAlt: 'Abood and Maryom welcoming you to British Learning Nursery',
       back: 'Back to home',
     },
@@ -256,6 +260,7 @@ export const translations = {
       curriculum: 'المنهج',
       facilities: 'المرافق',
       graduates: 'الخريجون السابقون',
+      friends: 'عبود ومريوم',
       contact: 'تواصل معنا',
     },
     lang: {
@@ -430,14 +435,17 @@ export const translations = {
     graduates: {
       label: 'الخريجون السابقون',
       title: 'لحظات فخر من خريجينا الصغار',
-      lead: 'تعرّفوا على عبود ومريوم، ومعرض متنامٍ لخريجي برتش ليرننج نيرسري.',
-      empty: 'المزيد من صور الخريجين قريباً',
-      friends: {
-        src: '/image.png',
-        alt: 'عبود ومريوم',
-        caption: 'عبود ومريوم ناطرينكم ومشتاقين لكم وايد',
-      },
+      lead: 'معرض متنامٍ لخريجي برتش ليرننج نيرسري. يمكن إضافة الصور في أي وقت.',
+      empty: 'صور الخريجين قريباً',
       photos: [],
+    },
+    friends: {
+      label: 'عبود ومريوم',
+      title: 'أصدقاؤنا الصغار',
+      lead: 'قولوا مرحباً لعبود ومريوم.',
+      src: '/image.png',
+      alt: 'عبود ومريوم',
+      caption: 'عبود ومريوم ناطرينكم ومشتاقين لكم وايد',
     },
     cta: {
       title: 'التسجيل مفتوح للعام الدراسي القادم',
@@ -495,6 +503,7 @@ export const NAV_HREFS = [
   { key: 'programs', href: '/#programs' },
   { key: 'curriculum', href: '/#curriculum' },
   { key: 'facilities', href: '/#facilities' },
+  { key: 'friends', href: '/#friends' },
   { key: 'graduates', href: '/#graduates' },
   { key: 'contact', href: '/#contact' },
 ]

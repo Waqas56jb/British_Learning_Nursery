@@ -7,6 +7,7 @@ import Founders from '../components/Founders'
 import Programs from '../components/Programs'
 import Curriculum from '../components/Curriculum'
 import Facilities from '../components/Facilities'
+import Friends from '../components/Friends'
 import Graduates from '../components/Graduates'
 import CtaBanner from '../components/CtaBanner'
 import Footer from '../components/Footer'
@@ -35,6 +36,7 @@ export default function HomePage() {
         <Programs />
         <Curriculum />
         <Facilities />
+        <Friends />
         <Graduates />
         <CtaBanner />
       </main>
