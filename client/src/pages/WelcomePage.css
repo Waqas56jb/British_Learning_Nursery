@@ -1,0 +1,59 @@
+.welcome {
+  position: relative;
+  padding:
+    calc(var(--header-h) + var(--safe-top) + clamp(2rem, 5vw, 3.5rem))
+    0
+    clamp(3rem, 7vw, 5rem);
+  overflow: hidden;
+  min-height: 70vh;
+}
+
+.welcome__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(245, 197, 24, 0.12), transparent 42%),
+    radial-gradient(ellipse at 85% 30%, rgba(0, 51, 141, 0.08), transparent 45%),
+    linear-gradient(180deg, #f3f6fb, var(--paper));
+}
+
+.welcome__wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.welcome__card {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(1.1rem, 3vw, 1.75rem);
+  border-radius: clamp(18px, 3vw, 24px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 51, 141, 0.1);
+  box-shadow: var(--shadow-soft);
+}
+
+.welcome__image {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 16px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.welcome__message {
+  font-family: var(--font-arabic), var(--font-display);
+  font-size: clamp(1.15rem, 3.5vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--bln-blue-deep);
+  max-width: 28ch;
+}
+
+.welcome__back {
+  min-width: 180px;
+  margin-top: 0.25rem;
+}

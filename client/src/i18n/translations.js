@@ -138,7 +138,7 @@ export const translations = {
             'Play-based and sensory activities',
             'Ideal after school as added learning time',
           ],
-          schedule: 'From 4:00 to 8:00',
+          schedule: 'From 4:00 PM to 8:00 PM',
           fees: '50 KD',
         },
       ],
@@ -193,6 +193,12 @@ export const translations = {
     cta: {
       title: 'Admissions open for the upcoming academic year',
       text: 'Visit us in Sabah Al Salem, Kuwait, or message us on WhatsApp — we would love to welcome your family.',
+    },
+    welcome: {
+      message:
+        'You — Abood and Maryom are awaiting you and missing you a lot. Can\'t wait to see you!',
+      imageAlt: 'Abood and Maryom welcoming you to British Learning Nursery',
+      back: 'Back to home',
     },
     footer: {
       visit: 'Visit',
@@ -255,9 +261,9 @@ export const translations = {
       name: 'حضانة بريتش ليرننج',
       shortName: 'BLN',
       brandWords: [
+        { text: 'حضانة', tone: 'blue' },
         { text: 'بريتش', tone: 'red' },
         { text: 'ليرننج', tone: 'yellow' },
-        { text: 'حضانة', tone: 'blue' },
       ],
       tagline: 'بداية مبهجة لرحلة تعلّم طفلك',
       description:
@@ -371,7 +377,7 @@ export const translations = {
             'أنشطة قائمة على اللعب والحواس',
             'مثالي بعد المدرسة كوقت تعلّم إضافي',
           ],
-          schedule: 'من الساعة 4:00 الى الساعة 8:00',
+          schedule: 'من الساعة 4:00 مساءً الى الساعة 8:00 مساءً',
           fees: '50 د.ك',
         },
       ],
@@ -425,6 +431,11 @@ export const translations = {
     cta: {
       title: 'التسجيل مفتوح للعام الدراسي القادم',
       text: 'زورونا في صباح السالم، الكويت، أو راسلونا عبر واتساب — يسعدنا استقبال عائلتكم.',
+    },
+    welcome: {
+      message: 'عبود ومريوم ناطرينكم ومشتاقين لكم وايد',
+      imageAlt: 'عبود ومريوم يرحّبون بكم في برتش ليرننج نيرسري',
+      back: 'العودة للرئيسية',
     },
     footer: {
       visit: 'الزيارة',
