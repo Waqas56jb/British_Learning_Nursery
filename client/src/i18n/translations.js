@@ -186,8 +186,14 @@ export const translations = {
     graduates: {
       label: 'Past Graduates',
       title: 'Proud moments from our little alumni',
-      lead: 'A growing gallery of past graduates from British Learning Nursery. Photos can be added anytime.',
-      empty: 'Graduate photos coming soon',
+      lead: 'Meet Abood & Maryom, and a growing gallery of past graduates from British Learning Nursery.',
+      empty: 'More graduate photos coming soon',
+      friends: {
+        src: '/image.png',
+        alt: 'Abood and Maryom',
+        caption:
+          'You — Abood and Maryom are awaiting you and missing you a lot. Can\'t wait to see you!',
+      },
       photos: [],
     },
     cta: {
@@ -424,8 +430,13 @@ export const translations = {
     graduates: {
       label: 'الخريجون السابقون',
       title: 'لحظات فخر من خريجينا الصغار',
-      lead: 'معرض متنامٍ لخريجي برتش ليرننج نيرسري. يمكن إضافة الصور في أي وقت.',
-      empty: 'صور الخريجين قريباً',
+      lead: 'تعرّفوا على عبود ومريوم، ومعرض متنامٍ لخريجي برتش ليرننج نيرسري.',
+      empty: 'المزيد من صور الخريجين قريباً',
+      friends: {
+        src: '/image.png',
+        alt: 'عبود ومريوم',
+        caption: 'عبود ومريوم ناطرينكم ومشتاقين لكم وايد',
+      },
       photos: [],
     },
     cta: {
