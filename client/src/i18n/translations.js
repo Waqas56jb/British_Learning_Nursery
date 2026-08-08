@@ -9,6 +9,7 @@ export const translations = {
       programs: 'Programs',
       curriculum: 'Curriculum',
       facilities: 'Facilities',
+      graduates: 'Past Graduates',
       contact: 'Contact',
     },
     lang: {
@@ -182,6 +183,13 @@ export const translations = {
         'Safe Environment',
       ],
     },
+    graduates: {
+      label: 'Past Graduates',
+      title: 'Proud moments from our little alumni',
+      lead: 'A growing gallery of past graduates from British Learning Nursery. Photos can be added anytime.',
+      empty: 'Graduate photos coming soon',
+      photos: [],
+    },
     cta: {
       title: 'Admissions open for the upcoming academic year',
       text: 'Visit us in Sabah Al Salem, Kuwait, or message us on WhatsApp — we would love to welcome your family.',
@@ -235,6 +243,7 @@ export const translations = {
       programs: 'البرامج',
       curriculum: 'المنهج',
       facilities: 'المرافق',
+      graduates: 'الخريجون السابقون',
       contact: 'تواصل معنا',
     },
     lang: {
@@ -406,6 +415,13 @@ export const translations = {
         'بيئة آمنة',
       ],
     },
+    graduates: {
+      label: 'الخريجون السابقون',
+      title: 'لحظات فخر من خريجينا الصغار',
+      lead: 'معرض متنامٍ لخريجي برتش ليرننج نيرسري. يمكن إضافة الصور في أي وقت.',
+      empty: 'صور الخريجين قريباً',
+      photos: [],
+    },
     cta: {
       title: 'التسجيل مفتوح للعام الدراسي القادم',
       text: 'زورونا في صباح السالم، الكويت، أو راسلونا عبر واتساب — يسعدنا استقبال عائلتكم.',
@@ -457,5 +473,6 @@ export const NAV_HREFS = [
   { key: 'programs', href: '/#programs' },
   { key: 'curriculum', href: '/#curriculum' },
   { key: 'facilities', href: '/#facilities' },
+  { key: 'graduates', href: '/#graduates' },
   { key: 'contact', href: '/#contact' },
 ]

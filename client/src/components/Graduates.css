@@ -1,0 +1,62 @@
+.graduates {
+  background:
+    radial-gradient(ellipse at 8% 20%, rgba(227, 30, 36, 0.05), transparent 40%),
+    radial-gradient(ellipse at 92% 70%, rgba(0, 51, 141, 0.06), transparent 42%),
+    var(--paper);
+}
+
+.graduates__intro {
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+  max-width: 40rem;
+}
+
+.graduates__grid,
+.graduates__empty {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.graduates__card,
+.graduates__placeholder {
+  margin: 0;
+  border-radius: clamp(14px, 2.5vw, 18px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 51, 141, 0.08);
+  min-width: 0;
+}
+
+.graduates__card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.graduates__card figcaption {
+  padding: 0.7rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+.graduates__placeholder {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: clamp(0.8rem, 2vw, 0.92rem);
+  font-weight: 500;
+  background:
+    linear-gradient(145deg, rgba(0, 51, 141, 0.03), rgba(245, 197, 24, 0.06)),
+    rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 768px) {
+  .graduates__grid,
+  .graduates__empty {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+}
