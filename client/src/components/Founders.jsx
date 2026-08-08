@@ -21,25 +21,34 @@ export default function Founders() {
         </motion.div>
 
         <div className="founders__grid">
-          {t.founders.people.map((person, i) => (
-            <motion.article
-              key={`${person.role}-${i}`}
-              className="founders__person"
-              initial={{ opacity: 0, y: 26 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: 0.08 * i }}
-            >
-              <div className={`founders__avatar founders__avatar--${i % 3}`} aria-hidden="true">
-                <span>{person.name.charAt(0)}</span>
-              </div>
-              <div className="founders__copy">
-                <p className="founders__role">{person.role}</p>
-                <h3>{person.name}</h3>
-                <p>{person.bio}</p>
-              </div>
-            </motion.article>
-          ))}
+          {t.founders.people.map((person, i) => {
+            const bioLines = Array.isArray(person.bio) ? person.bio : [person.bio]
+            const initial = person.initial || person.name.trim().charAt(0)
+
+            return (
+              <motion.article
+                key={`${person.role}-${i}`}
+                className="founders__person"
+                initial={{ opacity: 0, y: 26 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.55, delay: 0.08 * i }}
+              >
+                <div className={`founders__avatar founders__avatar--${i % 3}`} aria-hidden="true">
+                  <span>{initial}</span>
+                </div>
+                <div className="founders__copy">
+                  <p className="founders__role">{person.role}</p>
+                  <h3>{person.name}</h3>
+                  <ul className="founders__bio">
+                    {bioLines.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.article>
+            )
+          })}
         </div>
       </div>
     </section>

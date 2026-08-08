@@ -26,7 +26,7 @@ export const translations = {
       ],
       tagline: "A joyful start to your child's learning journey",
       description:
-        'British nursery in Sabah Al Salem. Established 2008 — British curriculum, values & sensory learning.',
+        'British nursery in Sabah Al Salem. Established 2008 — integrated curricula, values & sensory learning.',
       location: 'Sabah Al Salem, Kuwait',
       address: 'Block 1, 1st St, Sabah Al Salem, Kuwait',
       admissions: 'Admissions open',
@@ -50,10 +50,10 @@ export const translations = {
       scrollLabel: 'Scroll to about',
     },
     about: {
-      label: 'About BLN',
+      label: 'About British Learning Nursery',
       title: 'Nurturing young hearts and curious minds',
       lead:
-        'Since 2008, British Learning Nursery has welcomed families in Sabah Al Salem, Kuwait with a warm blend of British learning, values, and sensory discovery — a calm, joyful place for children to begin.',
+        'Since 2008, British Learning Nursery has welcomed families in Sabah Al Salem, Kuwait with a warm blend of learning, values, and sensory discovery — a calm, joyful place for children to begin.',
       points: [
         'Qualified, caring educators',
         'Safe, colourful learning spaces',
@@ -65,32 +65,44 @@ export const translations = {
     },
     features: [
       { title: 'Established 2008', detail: 'Years of trusted care' },
-      { title: 'British Curriculum', detail: 'EYFS-inspired learning' },
+      {
+        title: 'Integrated Curricula',
+        detail: 'British, American & Japanese approaches',
+      },
       { title: 'Islamic Values', detail: 'Manners & character' },
       { title: 'Sensory Learning', detail: 'Hands-on discovery' },
     ],
     founders: {
       label: 'Founders',
-      title: 'The hearts behind BLN',
+      title: 'The hearts behind British Learning Nursery',
       lead:
-        'Meet the people who built British Learning Nursery with care, faith, and a love for childhood. Full profiles can be added when their details are ready.',
+        'Meet the people who built British Learning Nursery with care, faith, and a love for childhood.',
       people: [
         {
-          name: 'Founder name',
+          name: 'Dr. Sabiha Al-Aboudi',
           role: 'Founder',
-          bio: 'A short introduction will appear here once founder details are shared.',
+          initial: 'S',
+          bio: [
+            'Doctorate in Educational Leadership & Administration',
+            'Doctorate in Psychology',
+            '23 years of experience in early childhood',
+          ],
         },
         {
-          name: 'Co-founder name',
+          name: 'Ms. Moodhi Al-Amiri',
           role: 'Co-founder',
-          bio: 'A short introduction will appear here once founder details are shared.',
+          initial: 'M',
+          bio: [
+            'Director of a Quran House at the Ministry of Awqaf',
+            '35 years of experience',
+          ],
         },
       ],
     },
     programs: {
       label: 'Programs',
       title: 'Learning paths for every little day',
-      lead: 'Tap a program to see more. Full schedules and fees can be updated once your details are ready.',
+      lead: 'Tap a program to see more details, schedule, and fees.',
       modalLabel: 'Program details',
       scheduleLabel: 'Schedule',
       feesLabel: 'Fees',
@@ -102,15 +114,14 @@ export const translations = {
           note: 'Tap for details',
           accent: 'red',
           summary:
-            'Our morning academic pathway supports little learners through a full academic year with British-inspired learning, values, and sensory play.',
+            'Our morning academic pathway supports little learners through the academic year with integrated curricula, values, and sensory play.',
           highlights: [
-            'Full academic year (September – June)',
-            'British curriculum & EYFS-inspired approach',
-            'Islamic values and manners woven into the day',
+            'Full academic year (September to May)',
+            'Integrated curricula combining British, American, and Japanese approaches, framed by the Prophetic methodology',
             'Sensory development and joyful discovery',
           ],
-          schedule: 'Weekday mornings — exact hours coming soon',
-          fees: 'Fees will be confirmed shortly',
+          schedule: 'Shift starts at 6:45 AM, ends at 2:15 PM',
+          fees: 'Monthly subscription: 135 KD',
         },
         {
           id: 'evening',
@@ -124,36 +135,37 @@ export const translations = {
             'Flexible monthly enrichment sessions',
             'Supportive, small-group atmosphere',
             'Play-based and sensory activities',
-            'Ideal after school or as added learning time',
+            'Ideal after school as added learning time',
           ],
-          schedule: 'Evening sessions — exact hours coming soon',
-          fees: 'Monthly fees will be confirmed shortly',
+          schedule: 'From 4:00 to 8:00',
+          fees: '50 KD',
         },
       ],
     },
     curriculum: {
       label: 'Curriculum',
       title: 'Four pillars that shape every day',
-      lead: 'British curriculum, values, life skills, and sensory learning — woven together with care.',
+      lead: 'Education, values, life skills, and sensory learning — woven together with care.',
       pillars: [
         {
-          title: 'British Learning',
-          detail: 'An EYFS-inspired approach that grows curiosity and confidence.',
+          title: 'Education',
+          detail: 'British and American curriculum.',
           tone: 'red',
         },
         {
           title: 'Islamic Values & Manners',
-          detail: 'Gentle guidance in character, respect, and everyday manners.',
+          detail: 'The Prophetic methodology.',
           tone: 'yellow',
         },
         {
           title: 'Life Skills',
-          detail: 'Independence, habits, and joyful routines for young children.',
+          detail: 'Japanese approach — Tokubetsu Katsudo (特別活動).',
           tone: 'blue',
         },
         {
-          title: 'Five Senses',
-          detail: 'Sensory play that helps children explore and understand the world.',
+          title: 'Sensory Curriculum',
+          detail:
+            'American approach for brain engagement and activating the motor side.',
           tone: 'green',
         },
       ],
@@ -215,7 +227,7 @@ export const translations = {
 
   ar: {
     dir: 'rtl',
-    metaTitle: 'بي إل إن — حضانة بريتش ليرننج',
+    metaTitle: 'برتش ليرننج نيرسري — حضانة بريتش ليرننج',
     nav: {
       home: 'الرئيسية',
       about: 'من نحن',
@@ -264,7 +276,7 @@ export const translations = {
       scrollLabel: 'الانتقال إلى من نحن',
     },
     about: {
-      label: 'عن بي إل إن',
+      label: 'عن برتش ليرننج نيرسري',
       title: 'نرعى القلوب الصغيرة والعقول الفضولية',
       lead:
         'منذ عام ٢٠٠٨، رحّبت حضانة بريتش ليرننج بالعائلات في صباح السالم، الكويت بمزيج دافئ من التعلّم البريطاني والقيم والاكتشاف الحسّي — مكان هادئ ومبهج لبداية الأطفال.',
@@ -278,32 +290,44 @@ export const translations = {
     },
     features: [
       { title: 'تأسست ٢٠٠٨', detail: 'سنوات من الرعاية الموثوقة' },
-      { title: 'منهج بريطاني', detail: 'تعلّم مستوحى من EYFS' },
+      {
+        title: 'مناهج مدمجة',
+        detail: 'بريطاني وأمريكي وياباني',
+      },
       { title: 'قيم إسلامية', detail: 'آداب وأخلاق' },
       { title: 'تعلّم حسّي', detail: 'اكتشاف عملي باليد' },
     ],
     founders: {
       label: 'المؤسسون',
-      title: 'القلوب وراء بي إل إن',
+      title: 'القلوب وراء برتش ليرننج نيرسري',
       lead:
-        'تعرّف على من بنوا حضانة بريتش ليرننج بالعناية والإيمان وحب الطفولة. يمكن إضافة الملفات الكاملة عند توفر التفاصيل.',
+        'تعرّف على من بنوا برتش ليرننج نيرسري بالعناية والإيمان وحب الطفولة.',
       people: [
         {
-          name: 'اسم المؤسس',
+          name: 'الدكتورة : صبيحة العبودي',
           role: 'مؤسس',
-          bio: 'سيظهر هنا تعريف موجز عند مشاركة تفاصيل المؤسسين.',
+          initial: 'ص',
+          bio: [
+            'دكتوراة قيادة وادارة تربوية',
+            'دكتوراة علم نفس',
+            'خبرة 23 عام في الطفولة المبكرة',
+          ],
         },
         {
-          name: 'اسم الشريك المؤسس',
+          name: 'الاستاذة: موضي العميري',
           role: 'شريك مؤسس',
-          bio: 'سيظهر هنا تعريف موجز عند مشاركة تفاصيل المؤسسين.',
+          initial: 'م',
+          bio: [
+            'مديرة دار قرآن في وزارة الأوقاف',
+            'خبرة 35 عام',
+          ],
         },
       ],
     },
     programs: {
       label: 'البرامج',
       title: 'مسارات تعلّم لكل يوم صغير',
-      lead: 'اضغط على برنامج لمعرفة المزيد. يمكن تحديث الجداول والرسوم لاحقاً.',
+      lead: 'اضغط على برنامج لمعرفة المزيد من التفاصيل والجدول والرسوم.',
       modalLabel: 'تفاصيل البرنامج',
       scheduleLabel: 'الجدول',
       feesLabel: 'الرسوم',
@@ -315,15 +339,14 @@ export const translations = {
           note: 'اضغط للتفاصيل',
           accent: 'red',
           summary:
-            'يدعم مسارنا الأكاديمي الصباحي الصغار طوال العام الدراسي بتعلّم مستوحى من المنهج البريطاني والقيم واللعب الحسّي.',
+            'يدعم مسارنا الأكاديمي الصباحي الصغار طوال العام الدراسي بمناهج مدمجة والقيم واللعب الحسّي.',
           highlights: [
-            'عام دراسي كامل (سبتمبر – يونيو)',
-            'منهج بريطاني ونهج مستوحى من EYFS',
-            'قيم إسلامية وآداب مدمجة في اليوم',
+            'عام دراسي كامل (سبتمبر الى مايو)',
+            'مناهج مدمجة تجمع بين المنهج البريطاني والامريكي والياباني وتم تأطيرهم بالمنهج النبوي الشريف',
             'تنمية حسّية واكتشاف مبهج',
           ],
-          schedule: 'صباحات أيام الأسبوع — الساعات الدقيقة قريباً',
-          fees: 'سيتم تأكيد الرسوم قريباً',
+          schedule: 'تبدأ المناوبة صباحا 6:45 تنتهي المناوبة ظهرا 2:15',
+          fees: 'الاشتراك الشهري 135 د.ك',
         },
         {
           id: 'evening',
@@ -337,42 +360,42 @@ export const translations = {
             'جلسات إثراء شهرية مرنة',
             'أجواء داعمة في مجموعات صغيرة',
             'أنشطة قائمة على اللعب والحواس',
-            'مثالي بعد المدرسة أو كوقت تعلّم إضافي',
+            'مثالي بعد المدرسة كوقت تعلّم إضافي',
           ],
-          schedule: 'جلسات مسائية — الساعات الدقيقة قريباً',
-          fees: 'سيتم تأكيد الرسوم الشهرية قريباً',
+          schedule: 'من الساعة 4:00 الى الساعة 8:00',
+          fees: '50 د.ك',
         },
       ],
     },
     curriculum: {
       label: 'المنهج',
       title: 'أربعة أعمدة تشكّل كل يوم',
-      lead: 'منهج بريطاني وقيم ومهارات حياتية وتعلّم حسّي — منسوجة بعناية.',
+      lead: 'تعليم وقيم ومهارات حياتية وتعلّم حسّي — منسوجة بعناية.',
       pillars: [
         {
-          title: 'التعلّم البريطاني',
-          detail: 'نهج مستوحى من EYFS ينمّي الفضول والثقة.',
+          title: 'التعليم',
+          detail: 'منهج بريطاني والامريكي',
           tone: 'red',
         },
         {
           title: 'القيم والآداب الإسلامية',
-          detail: 'توجيه لطيف في الخلق والاحترام وآداب الحياة اليومية.',
+          detail: 'المنهج النبوي الشريف',
           tone: 'yellow',
         },
         {
           title: 'المهارات الحياتية',
-          detail: 'استقلالية وعادات وروتين مبهج للأطفال الصغار.',
+          detail: 'المنهج الياباني — Tokubetsu Katsudo (特別活動)',
           tone: 'blue',
         },
         {
-          title: 'الحواس الخمس',
-          detail: 'لعب حسّي يساعد الأطفال على استكشاف العالم وفهمه.',
+          title: 'المنهج الحسي',
+          detail: 'المنهج الامريكي للتعامل مع الدماغ وتنشيط الجانب الحركي',
           tone: 'green',
         },
       ],
     },
     facilities: {
-      label: 'المرافق',
+      label: '',
       title: 'مساحات صُنعت للدهشة',
       lead: 'من الصفوف المشرقة إلى اللعب الخارجي — بيئة ملوّنة وآمنة يشعر فيها الأطفال بأنهم في بيتهم. يمكن إضافة صور المعرض لاحقاً.',
       imageAlt: 'الواجهة الملوّنة لحضانة بريتش ليرننج',
