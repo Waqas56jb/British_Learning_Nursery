@@ -15,7 +15,9 @@ export default function Facilities() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-label">{t.facilities.label}</p>
+          {t.facilities.label ? (
+            <p className="section-label">{t.facilities.label}</p>
+          ) : null}
           <h2 className="section-title">{t.facilities.title}</h2>
           <p className="section-lead">{t.facilities.lead}</p>
         </motion.div>
