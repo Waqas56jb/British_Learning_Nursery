@@ -50,6 +50,8 @@ export const translations = {
     },
     hero: {
       scrollLabel: 'Scroll to about',
+      slide: 'View photo',
+      slidesLabel: 'Hero photos',
     },
     about: {
       label: 'About British Learning Nursery',
@@ -175,7 +177,7 @@ export const translations = {
     facilities: {
       label: 'Facilities',
       title: 'Spaces made for wonder',
-      lead: 'From bright classrooms to outdoor play — a colourful, secure environment where children feel at home. Gallery photos can be added later.',
+      lead: 'From bright classrooms to outdoor play — a colourful, secure environment where children feel at home. Take a look around below.',
       imageAlt: 'Colourful exterior of British Learning Nursery',
       items: [
         'Sensory Spaces',
@@ -183,6 +185,33 @@ export const translations = {
         'Bright Classrooms',
         'Safe Environment',
       ],
+    },
+    gallery: {
+      label: 'Gallery',
+      title: 'Inside British Learning Nursery',
+      lead: 'A look around our classrooms, play spaces, and gardens in Sabah Al Salem. Tap any photo to view it larger.',
+      view: 'View photo',
+      close: 'Close gallery',
+      prev: 'Previous photo',
+      next: 'Next photo',
+      photos: {
+        sensoryPlay:
+          'Sensory play room with a climbing frame, slide, and rainbow wall mural',
+        playground:
+          'Shaded outdoor playground with swings and climbing structures',
+        reception: 'Reception desk and family waiting area',
+        smartClassroom:
+          'Classroom with an interactive smartboard and reading corner',
+        softPlay: 'Indoor soft-play and motor skills room with wall murals',
+        sensoryRoom: 'Dark sensory room for calm, focused discovery',
+        rainbowClassroom:
+          'Bright classroom with padded rainbow walls and a smartboard',
+        track: 'Outdoor road-safety track with grass and shaded play area',
+        alphabetClassroom:
+          'Classroom with an alphabet wall and learning materials',
+        prayerRoom: 'Quiet prayer room',
+        waitingArea: 'Parent waiting area with the school uniform display',
+      },
     },
     graduates: {
       label: 'Past Graduates',
@@ -300,6 +329,8 @@ export const translations = {
     },
     hero: {
       scrollLabel: 'الانتقال إلى من نحن',
+      slide: 'عرض الصورة',
+      slidesLabel: 'صور الواجهة',
     },
     about: {
       label: 'عن برتش ليرننج نيرسري',
@@ -423,7 +454,7 @@ export const translations = {
     facilities: {
       label: '',
       title: 'مساحات صُنعت للدهشة',
-      lead: 'من الصفوف المشرقة إلى اللعب الخارجي — بيئة ملوّنة وآمنة يشعر فيها الأطفال بأنهم في بيتهم. يمكن إضافة صور المعرض لاحقاً.',
+      lead: 'من الصفوف المشرقة إلى اللعب الخارجي — بيئة ملوّنة وآمنة يشعر فيها الأطفال بأنهم في بيتهم. تجوّلوا معنا في الصور أدناه.',
       imageAlt: 'الواجهة الملوّنة لحضانة بريتش ليرننج',
       items: [
         'مساحات حسّية',
@@ -431,6 +462,28 @@ export const translations = {
         'صفوف مشرقة',
         'بيئة آمنة',
       ],
+    },
+    gallery: {
+      label: 'معرض الصور',
+      title: 'من داخل برتش ليرننج نيرسري',
+      lead: 'جولة في صفوفنا ومساحات اللعب والحديقة في صباح السالم. اضغط على أي صورة لعرضها بحجم أكبر.',
+      view: 'عرض الصورة',
+      close: 'إغلاق المعرض',
+      prev: 'الصورة السابقة',
+      next: 'الصورة التالية',
+      photos: {
+        sensoryPlay: 'غرفة اللعب الحسّي مع مجسم تسلق وزحليقة وجدارية قوس قزح',
+        playground: 'ملعب خارجي مظلل مع أراجيح ومجسمات تسلق',
+        reception: 'مكتب الاستقبال وصالة انتظار العائلات',
+        smartClassroom: 'صف دراسي مع سبورة ذكية تفاعلية وركن للقراءة',
+        softPlay: 'غرفة اللعب الآمن والمهارات الحركية مع جداريات ملوّنة',
+        sensoryRoom: 'الغرفة الحسّية المظلمة للاكتشاف الهادئ والمركّز',
+        rainbowClassroom: 'صف مشرق بجدران مبطّنة بألوان قوس قزح وسبورة ذكية',
+        track: 'مسار المرور الخارجي مع مساحة خضراء ومنطقة لعب مظللة',
+        alphabetClassroom: 'صف دراسي بجدار الحروف والوسائل التعليمية',
+        prayerRoom: 'مصلّى هادئ',
+        waitingArea: 'صالة انتظار أولياء الأمور مع عرض الزي المدرسي',
+      },
     },
     graduates: {
       label: 'الخريجون السابقون',

@@ -1,18 +1,52 @@
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { SITE } from '../data'
+import { SITE, HERO_SLIDES } from '../data'
 import { useLanguage } from '../i18n/LanguageContext'
 import './Hero.css'
 
 const ease = [0.22, 1, 0.36, 1]
+const SLIDE_MS = 5500
 
 export default function Hero() {
   const { t } = useLanguage()
+  const [index, setIndex] = useState(0)
+  // Only ever mount one slide beyond the current one, so the browser fetches
+  // the photos gradually instead of pulling every hero image on first paint.
+  const [mounted, setMounted] = useState(2)
+
+  useEffect(() => {
+    setMounted((m) => Math.max(m, Math.min(HERO_SLIDES.length, index + 2)))
+  }, [index])
+
+  useEffect(() => {
+    if (HERO_SLIDES.length < 2) return undefined
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return undefined
+    }
+
+    const timer = window.setInterval(() => {
+      if (document.hidden) return
+      setIndex((i) => (i + 1) % HERO_SLIDES.length)
+    }, SLIDE_MS)
+
+    return () => window.clearInterval(timer)
+  }, [])
 
   return (
     <section id="home" className="hero">
       <div className="hero__media" aria-hidden="true">
-        <img src="/incorporate.png" alt="" className="hero__image" />
+        {HERO_SLIDES.slice(0, mounted).map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            className={`hero__image ${i === index ? 'is-active' : ''}`}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchPriority={i === 0 ? 'high' : 'low'}
+            decoding="async"
+          />
+        ))}
         <div className="hero__veil" />
         <div className="hero__glow hero__glow--gold" />
         <div className="hero__glow hero__glow--rose" />
@@ -78,6 +112,26 @@ export default function Hero() {
             >
               {t.common.whatsappUs}
             </a>
+          </motion.div>
+
+          <motion.div
+            className="hero__dots"
+            role="group"
+            aria-label={t.hero.slidesLabel}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.9, ease }}
+          >
+            {HERO_SLIDES.map((src, i) => (
+              <button
+                key={src}
+                type="button"
+                className={`hero__dot ${i === index ? 'is-active' : ''}`}
+                aria-label={`${t.hero.slide} ${i + 1}`}
+                aria-current={i === index}
+                onClick={() => setIndex(i)}
+              />
+            ))}
           </motion.div>
         </div>
       </div>

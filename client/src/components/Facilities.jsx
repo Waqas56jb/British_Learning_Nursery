@@ -37,20 +37,6 @@ export default function Facilities() {
           ))}
         </ul>
       </div>
-
-      <div className="facilities__band">
-        <div className="container">
-          <motion.div
-            className="facilities__visual"
-            initial={{ opacity: 0, scale: 1.03 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <img src="/incorporate.png" alt={t.facilities.imageAlt} />
-          </motion.div>
-        </div>
-      </div>
     </section>
   )
 }

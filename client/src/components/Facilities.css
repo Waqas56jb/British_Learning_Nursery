@@ -1,11 +1,10 @@
 .facilities {
-  padding-bottom: 0;
+  padding-bottom: clamp(1.5rem, 3.5vw, 2.5rem);
 }
 
 .facilities__layout {
   display: grid;
   gap: clamp(1.5rem, 4vw, 3rem);
-  margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
   min-width: 0;
 }
 
@@ -48,36 +47,6 @@
 }
 .facilities__bar--3 {
   background: #2f9e6b;
-}
-
-.facilities__band {
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(0, 51, 141, 0.06) 20%,
-    rgba(0, 51, 141, 0.08)
-  );
-}
-
-.facilities__visual {
-  overflow: hidden;
-  border-radius: clamp(16px, 3vw, 28px) clamp(16px, 3vw, 28px) 0 0;
-  box-shadow: 0 -8px 40px rgba(0, 51, 141, 0.08);
-  margin-inline: 0;
-}
-
-.facilities__visual img {
-  width: 100%;
-  height: clamp(200px, 42vw, 420px);
-  object-fit: cover;
-  object-position: center 55%;
-  transition: transform 1.2s var(--ease);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .facilities__visual:hover img {
-    transform: scale(1.04);
-  }
 }
 
 @media (min-width: 768px) {
