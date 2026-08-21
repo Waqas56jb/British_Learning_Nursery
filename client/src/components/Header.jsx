@@ -128,9 +128,15 @@ export default function Header({ solid = false }) {
               </button>
             </div>
             <div className="header__drawer-actions">
-              <Link to="/register" className="btn btn-primary" onClick={close}>
+              <a
+                href={SITE.registerForm}
+                className="btn btn-primary"
+                target="_blank"
+                rel="noreferrer"
+                onClick={close}
+              >
                 {t.common.registerInterest}
-              </Link>
+              </a>
               <a
                 href={SITE.whatsapp}
                 className="btn btn-whatsapp"

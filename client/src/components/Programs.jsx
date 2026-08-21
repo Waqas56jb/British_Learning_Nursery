@@ -1,6 +1,6 @@
 import { useEffect, useId, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
+import { SITE } from '../data'
 import { useLanguage } from '../i18n/LanguageContext'
 import './Programs.css'
 
@@ -121,13 +121,15 @@ export default function Programs() {
               </div>
 
               <div className="programs__modal-actions">
-                <Link
-                  to="/register"
+                <a
+                  href={SITE.registerForm}
                   className="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={() => setActiveId(null)}
                 >
                   {t.common.enquire}
-                </Link>
+                </a>
                 <button
                   type="button"
                   className="btn btn-outline"

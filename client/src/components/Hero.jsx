@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import { SITE, HERO_SLIDES } from '../data'
 import { useLanguage } from '../i18n/LanguageContext'
 import './Hero.css'
@@ -101,9 +100,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7, ease }}
           >
-            <Link to="/register" className="btn btn-primary hero__btn">
+            <a
+              href={SITE.registerForm}
+              className="btn btn-primary hero__btn"
+              target="_blank"
+              rel="noreferrer"
+            >
               {t.common.bookTour}
-            </Link>
+            </a>
             <a
               href={SITE.whatsapp}
               className="btn btn-ghost hero__btn"

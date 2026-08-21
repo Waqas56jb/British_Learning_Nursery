@@ -5,6 +5,8 @@ export const SITE = {
   whatsapp: 'https://linktr.ee/British_Learning_Nursery',
   instagram: 'https://linktr.ee/British_Learning_Nursery',
   tiktok: 'https://linktr.ee/British_Learning_Nursery',
+  registerForm:
+    'https://docs.google.com/forms/d/e/1FAIpQLSeeF3Qt2JMLP0vncZ0m2MYQmf0U7TT50x3P3Ti5CdF4CWdLrw/viewform',
 }
 
 /* Hero background slideshow — cross-fades in this order.

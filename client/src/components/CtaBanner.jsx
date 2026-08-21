@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import { SITE } from '../data'
 import { useLanguage } from '../i18n/LanguageContext'
 import './CtaBanner.css'
@@ -28,9 +27,14 @@ export default function CtaBanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.55, delay: 0.1 }}
         >
-          <Link to="/register" className="btn btn-accent">
+          <a
+            href={SITE.registerForm}
+            className="btn btn-accent"
+            target="_blank"
+            rel="noreferrer"
+          >
             {t.common.registerInterest}
-          </Link>
+          </a>
           <a
             href={SITE.whatsapp}
             className="btn btn-ghost"
