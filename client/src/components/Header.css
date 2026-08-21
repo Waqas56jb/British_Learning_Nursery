@@ -68,59 +68,21 @@
   box-shadow: 0 4px 14px rgba(0, 51, 141, 0.12);
 }
 
-.header__brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.1;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.header__mark {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.header__mark span:nth-child(1) {
-  color: #ff6b6f;
-}
-.header__mark span:nth-child(2) {
-  color: #f5c518;
-}
-.header__mark span:nth-child(3) {
-  color: #7eafff;
-}
-
-.header--solid .header__mark span:nth-child(1) {
-  color: var(--bln-red);
-}
-.header--solid .header__mark span:nth-child(2) {
-  color: #c9a00e;
-}
-.header--solid .header__mark span:nth-child(3) {
-  color: var(--bln-blue);
-}
-
-/* Hide long name on phones — keeps header clean */
 .header__name {
-  display: none;
-  font-size: 0.68rem;
-  font-weight: 520;
-  letter-spacing: 0.02em;
+  min-width: 0;
+  font-size: 0.78rem;
+  font-weight: 620;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
 }
 
 .header--solid .header__name {
-  color: var(--ink-muted);
+  color: var(--bln-blue-deep);
   text-shadow: none;
 }
 
@@ -294,8 +256,8 @@
   }
 
   .header__name {
-    display: block;
-    max-width: 200px;
+    font-size: 0.88rem;
+    max-width: 220px;
   }
 
   .header a.btn.header__cta--wa {

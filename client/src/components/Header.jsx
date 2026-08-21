@@ -33,14 +33,7 @@ export default function Header({ solid = false }) {
       <div className="container header__inner">
         <Link to="/" className="header__brand" onClick={close}>
           <img src="/logo.png" alt={t.site.name} className="header__logo" />
-          <span className="header__brand-text">
-            <span className="header__mark" aria-hidden="true">
-              <span>B</span>
-              <span>L</span>
-              <span>N</span>
-            </span>
-            <span className="header__name">{t.site.name}</span>
-          </span>
+          <span className="header__name">{t.site.name}</span>
         </Link>
 
         <nav className="header__nav" aria-label="Primary">

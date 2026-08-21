@@ -28,7 +28,7 @@ export default function CtaBanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.55, delay: 0.1 }}
         >
-          <Link to="/welcome" className="btn btn-accent">
+          <Link to="/register" className="btn btn-accent">
             {t.common.registerInterest}
           </Link>
           <a
